@@ -1,0 +1,82 @@
+@import url(reset.css);
+
+* {
+  color: aqua;
+}
+
+h1 {
+  color: crimson;
+}
+
+.link {
+  color: blueviolet;
+}
+
+#history {
+  color: deeppink;
+}
+
+#first-courses {
+  color: deeppink;
+}
+
+#flour {
+  color: deeppink;
+}
+
+#meat {
+  color: deeppink;
+}
+
+#sausage {
+  color: deeppink;
+}
+
+.box-drinks h3 {
+  color: rgba(233, 200, 10, 0.863);
+}
+
+#drinks {
+  color: deeppink;
+}
+
+[class*="te"] {
+  color: rgb(36, 234, 10);
+}
+
+div.block {
+  color: blue;
+}
+
+.bread,
+.domasnia-kovbasa {
+  color: darkorange;
+}
+
+.list .punkt {
+  color: magenta;
+}
+
+.text * {
+  color: rgb(228, 21, 21);
+}
+
+.borscht > p {
+  color: rgb(96, 46, 143);
+}
+
+.borscht ~ p {
+  color: rgb(207, 173, 240);
+}
+
+.borscht + p {
+  color: rgb(15, 125, 2);
+}
+
+.kvass {
+  color: rgb(141, 141, 138) !important;
+}
+
+.kvass {
+  color: crimson;
+}
