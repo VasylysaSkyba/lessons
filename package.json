@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "js-beautify": "^1.15.1"
+  },
+  "html": {
+    "unformatted": [
+      "br",
+      "img",
+      "input"
+    ]
+  }
+}
