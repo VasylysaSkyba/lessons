@@ -1,0 +1,489 @@
+@import url("https://fonts.googleapis.com/css?family=Epilogue:regular,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:regular,700&display=swap");
+@import url("reset.css");
+
+.wrapper {
+  min-height: 100%;
+  /*займає всю висоту в'юпорта*/
+  overflow: hidden;
+  /*не буде скрола*/
+}
+
+.container {
+  max-width: 1200px;
+  /*додали padding +15px + 15px = 1200, а контент буде в менежах 1170, як по макекту*/
+  margin: 0 auto;
+  padding-inline: 15px;
+  /*зменшують внутрішній вміст контейра*/
+}
+
+.header {
+  padding-block: 10px;
+  margin-bottom: 20px;
+}
+
+.header-title {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.header-list {
+  display: flex;
+  font-size: 0;
+  justify-content: center;
+
+}
+
+.header-item {
+  display: inline-block;
+}
+
+.header-item:last-child {
+  margin-right: 0px;
+}
+
+.header-link {
+  font-family: "DM+Sans", sans-serif;
+  font-size: 20px;
+  color: brown;
+  background-color: rgb(63, 217, 49);
+  border: 2px solid rgb(79, 23, 23);
+  border-radius: 8px;
+  padding: 5px;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+
+.header-link:hover {
+  background-color: aquamarine;
+  text-decoration: underline;
+}
+
+.business {
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 50px;
+  /*для відступу до наступного макету*/
+
+}
+
+.business>* {
+  margin-bottom: 54px;
+}
+
+.business>*:last-child {
+  margin-bottom: 0;
+}
+
+.business-content {
+  max-width: 630px;
+  display: inline-block;
+
+}
+
+.business-content>* {
+  margin-bottom: 8px;
+
+}
+
+.business-content>*:last-child {
+  margin-bottom: 0;
+}
+
+.business-data {
+  color: #4A3AFF;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  /* margin-bottom: 8px; */
+}
+
+.business-title {
+  color: #1E1B39;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.28;
+  /* margin-bottom: 8px; */
+}
+
+.business-title::after {
+  vertical-align: middle;
+  content: "";
+  width: 38px;
+  height: 38px;
+}
+
+.title-1::after {
+  background: url("../img/magnifying-glass.png") 0 0 / 38px no-repeat;
+}
+
+.title-2::after {
+  background: url("../img/leptop.png") 0 0 / 38px no-repeat;
+}
+
+.title-3::after {
+  background: url("../img/rocket.png") 0 0 / 38px no-repeat;
+}
+
+
+.business-text {
+  color: #6E6C83;
+  font-size: 24px;
+  line-height: 1.75;
+}
+
+.pricing {
+  font-family: "DM Sans", sans-serif;
+  border-radius: 56px;
+  background: #F0F0F6;
+  max-width: 543px;
+  padding: 24px;
+  margin-bottom: 50px;
+  /*для відступу між макетами*/
+
+}
+
+.img-box {
+  margin-bottom: 34px;
+  text-align: center;
+}
+
+.pricing-img {
+  max-width: 100%;
+  border-radius: 34px;
+}
+
+.list-box {
+  margin-bottom: 34px;
+  /*по макету 58px - 24px padding(той що на pricing) */
+}
+
+.pricing-item {
+  color: #1E1B39;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.pricing-item::before {
+  vertical-align: middle;
+  content: "";
+  width: 36px;
+  height: 36px;
+  background-color: #4A3AFF;
+  border-radius: 50%;
+  margin-right: 14px;
+  background: url("../img/check.svg") 0 0 / 36px no-repeat;
+}
+
+.pricing-item:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.template {
+  font-family: "Epilogue", sans-serif;
+  background-color: #FDF0E9;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+
+.template-img-box {
+  margin-bottom: 74px;
+  text-align: center;
+}
+
+.template-img {
+  max-width: 100%;
+}
+
+.template-info {
+  max-width: 570px;
+
+}
+
+.info-text1 {
+
+  color: #391400;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+
+}
+
+.info-title {
+  color: #391400;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 35px;
+
+}
+
+.info-text {
+  color: rgba(57, 20, 0, 0.64);
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 34px;
+
+}
+
+.info-list {
+  margin-bottom: 32px;
+
+}
+
+.info-item {
+  color: #391400;
+  font-size: 16px;
+  line-height: 2;
+
+
+}
+
+.info-li::before {
+  vertical-align: middle;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #EF6D58;
+  border-radius: 50%;
+  margin-right: 16px;
+  /* margin-right: 13px; */
+}
+
+/* .info-li:not(:last-child) {
+  margin-bottom: 13px;
+} */
+
+.info-background {
+  border-radius: 6px;
+  background-color: #F9E5DA;
+  padding: 32px;
+}
+
+.info-background::before {
+  vertical-align: top;
+  content: "";
+  width: 48px;
+  height: 36px;
+  background: url("../img/lapky.svg") 0 0 / 36px no-repeat;
+  margin-right: 32px;
+
+}
+
+span {
+  display: inline-block;
+  max-width: 426px;
+}
+
+.block1 {
+  margin-bottom: 5px;
+}
+
+.block1-text {
+  color: rgb(241, 237, 234);
+  font-size: 30px;
+  background-color: #6E6C83;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.block1-text:hover {
+  background-color: #7ee90c;
+}
+
+.block1-link {
+  color: rgb(51, 0, 255);
+  text-transform: uppercase;
+}
+
+/*при наведені мишки*/
+.block1-link:hover {
+  text-decoration: underline;
+}
+
+/* якщо вже відвідали це посилання*/
+.block1-link:visited {
+  color: #cc76dd;
+}
+
+/*затиснута клавіша*/
+.block1-link:active {
+  color: #4e9305;
+}
+
+/*звернення до елемента у стані фокусу*/
+.block1-link:focus {
+  outline: 2px dashed red;
+}
+
+/*коли на об'єкт першли через Tab, частіше ним користуються*/
+.block1-link:focus-visible {
+  outline: 2px dashed rgb(13, 212, 6);
+}
+
+/*відкриває доступ кол на об'єкт посилалися, через id, з'являється в адресі*/
+.homework:target {
+  background-color: #3cb9e7;
+}
+
+.block2 {
+  background-color: #87d3ef;
+  padding: 15px;
+}
+
+/*до першого дочірного елементу, якщо вище буде інший тег то не відпрацює*/
+/* .block2 p:first-child {
+color: #447e05;
+} */
+
+/*будь який перший*/
+/* .block2 *:first-child {
+  color: #447e05;
+} */
+
+
+/*перший тег Р*/
+.block2 p:first-of-type {
+  color: #447e05;
+}
+
+
+/*до останього дочірного елементу*/
+/* .block2 p:last-child {
+  color: #447e05;
+} */
+
+
+/*останій тег Р*/
+.block2 p:last-of-type {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.block2 p {
+  margin-bottom: 5px;
+}
+
+/* .block2 p:nth-child(3){
+  color: #EF6D58;
+} */
+
+.block2 p:nth-of-type(3) {
+  color: #EF6D58;
+}
+
+.block3 {
+  background-color: #abeb68;
+  padding: 15px;
+}
+
+
+.block3 p {
+  max-width: 50%;
+}
+
+.block3 p:nth-of-type(even) {
+  color: white;
+  margin-left: auto;
+  text-align: right;
+}
+
+.block4 {
+  background-color: #87d3ef;
+  padding: 15px;
+}
+
+/* .block4 p:nth-of-type(3n){
+  color: #cc76dd;
+ } */
+
+.block4 p:nth-of-type(4n + 1) {
+  color: #cc76dd;
+  text-align: right;
+
+}
+
+.block5 {
+  padding: 15px;
+}
+
+.block5 p:not(:nth-of-type(4)) {
+  color: crimson;
+}
+
+.block5:has(span) {
+  background-color: #cc76dd;
+}
+
+/*універсальне рішення*/
+/*це буде як по замовченню*/
+.block5>* {
+  margin-bottom: 20px;
+}
+
+.block5>*:last-child {
+  margin-bottom: 0;
+}
+
+/*окремому елементу задати свій відступ*/
+
+.blok6 {
+  padding: 15px;
+}
+
+.elem {
+  margin: 20px;
+}
+
+.elem::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #EF6D58;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.elem::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url("../img/rocket.png") 0 0 / 20px no-repeat;
+  margin-left: 5px;
+  vertical-align: bottom;
+}
+
+.elem:hover::before {
+  background-color: #4A3AFF;
+}
+
+.elem:hover::after {
+  background: url("../img/leptop.png") 0 0 / 20px no-repeat;
+}
+
+/*лінія буде залежити від кількості тексту*/
+.some-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.some-title span {
+  display: inline-block;
+}
+
+.some-title span::after {
+  content: "";
+  height: 2px;
+  width: 60%;
+  background-color: #7ee90c;
+  display: block;
+  /*псевдоелементи рядкові*/
+  margin-top: 5px;
+}
