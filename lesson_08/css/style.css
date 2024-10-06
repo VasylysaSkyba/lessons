@@ -1,0 +1,67 @@
+@import url("reset.css");
+
+.wrapper {
+  min-height: 100%;
+  /*займає всю висоту в'юпорта*/
+  overflow: hidden;
+  /*не буде скрола*/
+}
+
+.container {
+  max-width: 1200px;
+  /*додали padding +15px + 15px = 1200, а контент буде в менежах 1170, як по макекту*/
+  margin: 0 auto;
+  padding-inline: 15px;
+  /*зменшують внутрішній вміст контейра*/
+  padding-block: 15px;
+}
+
+.header,
+footer {
+  padding: 20px;
+  margin: 10px;
+  background-color: rgb(227, 217, 28);
+}
+
+.main {
+  background-color: rgb(226, 240, 100);
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.box {
+  margin-bottom: 30px;
+  background-color: #c8e66c;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.box:last-child {
+  margin-bottom: 0;
+}
+
+.box:hover {
+  background-color: bisque;
+}
+
+.text {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.some-pixel-image {
+  /* width: 1500px; */
+}
+
+.some-vector-image {
+  width: 150px;
+}
