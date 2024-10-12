@@ -1,0 +1,47 @@
+@import url("reset.css");
+
+.wrapper {
+  min-height: 100%;
+  /*займає всю висоту в'юпорта*/
+  overflow: hidden;
+  /*не буде скрола*/
+}
+
+[class*="__container"] {
+  max-width: 1200px;
+  /*додали padding +15px + 15px = 1200, а контент буде в менежах 1170, як по макекту*/
+  margin: 0 auto;
+  padding-left: 15px;
+  /*зменшують внутрішній вміст контейра*/
+  padding-right: 15px;
+}
+
+/*для практики*/
+[class*="__inner-container"]{
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header,
+.footer{
+  padding: 15px;
+}
+
+.header--margin-bottom{
+  margin-bottom: 15px;
+}
+
+.header__title{
+  text-align: center;
+}
+
+.block-content__lable--blue{
+  color: blue;
+}
+
+.footer__text{
+  text-align: center;
+}
+
