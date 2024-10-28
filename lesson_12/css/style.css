@@ -1,0 +1,514 @@
+@import url("reset.css");
+
+.wrapper {
+  min-height: 100%;
+  /*займає всю висоту в'юпорта*/
+  overflow: hidden;
+  /*не буде скрола*/
+}
+
+[class*="__container"] {
+  max-width: 1200px;
+  /*додали padding +15px + 15px = 1200, а контент буде в менежах 1170, як по макекту*/
+  margin: 0 auto;
+  padding-left: 15px;
+  /*зменшують внутрішній вміст контейра*/
+  padding-right: 15px;
+}
+
+
+.header,
+.footer {
+  padding: 15px;
+}
+
+.header--margin-bottom {
+  margin-bottom: 15px;
+}
+
+.header__title {
+  text-align: center;
+}
+
+
+/*--------------- 12 ------------------*/
+/*плавний перехід анімації, потрібно щоб значення було в цифрах, 0.3s-.8s*/
+.link-duration {
+  color: #d111e6;
+  transition-duration: 0.3s;
+  margin-bottom: 20px;
+}
+
+.link-duration:hover {
+  color: #74ca0a;
+  transition-duration: 0.8s;
+}
+
+/*ефект переходу, властивості не успадковуються*/
+.block-property {
+  background-color: #27b7d7;
+  padding: 15px;
+  width: 300px;
+  font-size: 20px;
+  transition-duration: 0.5s, 2s;
+  transition-property: width,
+    background-color;
+  margin-bottom: 20px;
+}
+
+.block-property:hover {
+  background-color: #27d733;
+  padding: 20px;
+  width: 400px;
+  font-size: 25px;
+}
+
+
+/*затримка виконання*/
+.block-delay {
+  background-color: #27b7d7;
+  padding: 15px;
+  width: 300px;
+  height: 200px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.block-delay {
+  transition-duration: 1s, 1.5s;
+  transition-property: width, height;
+  transition-delay: 0s, 1s;
+
+  /*transition-duration: 0.3s;
+  transition-property: all;
+  transition-delay: 1s;*/
+}
+
+.block-delay:hover {
+  width: 500px;
+  height: 500px;
+}
+
+
+/*стиль переходу*/
+.block-function {
+  background-color: #27b7d7;
+  padding: 15px;
+  width: 300px;
+  font-size: 20px;
+  margin-bottom: 20px;
+
+  /* transition-duration: 0.5s;
+  transition-timing-function: linear; */
+  transition-duration: 60s;
+  transition-timing-function: steps(60, start);
+}
+
+.block-function:hover {
+  width: 500px;
+}
+
+
+/*Універсальний запис transition
+
+transition-property
+transition-duration
+transition-timing-function
+transition-delay*/
+
+/* .block-function {
+  transition: all, 0.5s, ease, 0s;
+  або
+  transition: all 0.3s;
+  або конкретне значення (одне чи два), якщо їх більше то all
+  transition: wight,
+  background-color 0.3s;
+} */
+
+
+
+/*will-change допомагає браузеру краще відпрацювати анімацію, вмикає апаратні можливості вотс ап, відео карти*/
+.block-will-change {
+  background-color: #27b7d7;
+  padding: 15px;
+  width: 300px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.block-will-change {
+  will-change: width,
+    background-color;
+  transition: width,
+    background-color 0.3s, 0.3s;
+}
+
+.block-will-change:hover {
+  width: 500px;
+  background-color: #27d733;
+}
+
+/*------------- CSS animation & @keyframes -----------*/
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #6a0667;
+
+  border: 10px dashed rgb(18, 18, 18);
+}
+
+/*name (і'мя сценарію) не може містить пробіли та інші знаки крім дефісу (-)*/
+
+/*ключові кадри сценарію*/
+@keyframes color-change {
+  0% {
+    /* transform: rotate(0deg);*/
+    background-color: #6a0667;
+  }
+
+  50% {
+    background-color: #060d6a;
+  }
+
+  100% {
+    /*transform: rotate(360deg)*/
+    background-color: #066a15;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+.circle {
+  animation-name: color-change,
+    rotate;
+  animation-duration: 10s;
+  margin-bottom: 20px;
+}
+
+
+.circle-iteration-count {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #41378c;
+  border: 10px dashed rgb(18, 18, 18);
+
+  animation-name: color-change,
+    rotate;
+  animation-duration: 10s;
+  margin-bottom: 20px;
+  /* animation-iteration-count: cubic-bezier(.05, .9, .83, .67); */
+  animation-timing-function: cubic-bezier(.05, .9, .83, .67);
+}
+
+/* .block-will-change {
+  background-color: #27b7d7;
+  padding: 15px;
+  width: 300px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  /*animation*/
+/* animation-name: rotate;
+  animation-duration: 2s;
+} */
+
+
+
+/*-------HOMEWORK--------*/
+
+.homework {
+  display: inline-block;
+  position: relative;
+  padding: 50px;
+  background-image: linear-gradient(rgb(60, 44, 233), rgb(52, 219, 52));
+  min-height: 400px;
+  width: 100%;
+}
+
+.car {
+  position: relative;
+  perspective: 300px;
+  perspective-origin: center;
+}
+
+.car__sun {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: yellow;
+  border: 2px dashed orange;
+  box-shadow: 10px 10px 120px 43px rgba(226, 245, 14, 1);
+  animation-name: rotate,
+    sun;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+.car__animation {
+  position: relative;
+  animation-name: move-car;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.car__corps-up {
+  position: absolute;
+  width: 200px;
+  height: 130px;
+  border: 1px solid black;
+  background-color: darkblue;
+  border-radius: 100% 0% 100% 0% / 53% 100% 0% 47%;
+  top: 100px;
+  left: 30px;
+}
+
+.car__corps-bottom {
+  position: absolute;
+  width: 200px;
+  height: 130px;
+  border: 1px solid black;
+  background-color: darkblue;
+  border-radius: 0% 100% 100% 0% / 45% 85% 15% 55%;
+  top: 100px;
+  left: 230px;
+}
+
+.car__door {
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  border: 1px solid black;
+  top: 165px;
+  left: 240px;
+  background-color: #5b769c;
+}
+
+.car__wheels {
+  position: relative;
+
+}
+
+.wheel-car__wheel {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px dashed black;
+  position: absolute;
+  background-color: bisque;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0, -0.47, 0.82, 0);
+  animation-iteration-count: 2;
+  animation-fill-mode: forwards;
+}
+
+.wheel-car__wheel:first-child {
+  left: 60px;
+  top: 185px;
+}
+
+.wheel-car__wheel:last-child {
+  top: 185px;
+  left: 290px;
+}
+
+.wheel-car__wheel::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.car__headlights {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  border: 1px solid black;
+  top: 170px;
+  left: 30px;
+  background-color: crimson;
+}
+
+.car__headlights:hover {
+  background-color: yellow;
+}
+
+.car__windows {
+  position: relative;
+}
+
+.window-car__window {
+  position: absolute;
+  width: 90px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: #76adfa;
+  opacity: 0.5;
+  top: 110px;
+}
+
+.window-car__window:first-child {
+  left: 260px;
+  border-radius: 0% 100% 100% 0% / 0% 100% 0% 100%;
+
+}
+
+.window-car__window:last-child {
+  left: 100px;
+  border-radius: 100% 0% 100% 0% / 56% 100% 0% 44%;
+}
+
+.car__headlights2 {
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  border: 1px solid black;
+  top: 156px;
+  left: 385px;
+  border-radius: 60%;
+  background-color: #c1e6f6;
+  transform: rotate(-26deg);
+  animation-name: headlights;
+  animation-duration: 3s;
+}
+
+.car__way {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  height: 100px;
+  background-color: #525252;
+  z-index: -1;
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+  transform: perspective(500px) rotateX(30deg);
+}
+
+.car__way::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, #fff 0%, #fff 0%, #fff 70%, #525252 70%, #525252 100%);
+  top: 50%;
+  height: 10px;
+  width: 100%;
+  left: 0;
+  transform: translateY(-50%);
+  background-size: 120px;
+  animation-name: line;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* animation: line-way 0.5s linear infinite; */
+}
+
+.fox__animation {
+  position: absolute;
+  top: 190px;
+  left: -120px;
+  animation-name: fox-move,
+    fox-rotate;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+@keyframes sun {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: 1200px;
+  }
+}
+
+@keyframes move-car {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 700px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes headlights {
+  0% {
+    background-color: #c1e6f6;
+  }
+
+  100% {
+    background-color: #e4ec52;
+  }
+}
+
+@keyframes line {
+  0% {
+    background-position: 0px;
+  }
+
+  100% {
+    background-position: -120px;
+  }
+}
+
+.fox {
+  position: relative;
+}
+
+@keyframes fox-move {
+  0% {
+    left: -120px;
+  }
+
+  100% {
+    left: 700px;
+  }
+}
+
+@keyframes fox-rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+
+.footer__text {
+  text-align: center;
+}
