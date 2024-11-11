@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:regular,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,600&display=swap");
+@import url("reset.css");
+
+
+.wrapper {
+  min-height: 100%;
+  /*займає всю висоту в'юпорта*/
+  overflow: hidden;
+  /*не буде скрола*/
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper>main {
+  flex-grow: 1;
+}
+
+.personal-container {
+  max-width: 590px;
+  /*додали padding +15px + 15px = 560, а контент буде в менежах 560, як по макекту*/
+  margin: 0 auto;
+  padding-left: 15px;
+  /*зменшують внутрішній вміст контейра*/
+  padding-right: 15px;
+  margin-bottom: 100px;
+}
+
+.header,
+.footer {
+  padding: 15px;
+}
+
+.header--margin-bottom {
+  margin-bottom: 15px;
+}
+
+.header__title,
+.footer__text {
+  text-align: center;
+}
+
+.personal-form {
+  color: #697484;
+  font-family: "Work Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 15px 0;
+}
+
+.lable-personal {
+  color: #87909D;
+  text-align: start;
+}
+
+.personal-form__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  /* width: 100%; */
+}
+
+.personal-form__data input {
+  border-bottom: 1px solid #E6E8EB;
+  padding: 14px 0;
+}
+
+.personal-form__data input:hover {
+  border-bottom: 1px solid #A53DFF;
+}
+
+
+.flex-data {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+
+}
+
+.personal-form__btn {
+  text-align: start;
+}
+
+.button-personal {
+  display: flex;
+  color: #FFF;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 12px 24px;
+  border-radius: 4px;
+  background: #A53DFF;
+  align-items: center;
+  column-gap: 14px;
+}
+
+.button-personal::after {
+  content: "";
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+
+.website-container {
+  max-width: 976px;
+  /*додали padding +50px + 50px = 1076, а контент буде в менежах 976px, як по макекту*/
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 12px;
+  border: 1px solid #262626;
+  background: #0F0F0F;
+
+}
+
+.website-form {
+  color: #999;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+}
+
+.left-top input,
+.right-top input {
+  border-radius: 8px;
+  border: 1px solid #262626;
+  background: #141414;
+  padding: 20px;
+  text-transform: capitalize;
+}
+
+.left-top label,
+.right-top label,
+.center-form label {
+  color: #FFF;
+  font-weight: 600;
+}
+
+.top-form {
+  display: flex;
+  gap: 50px;
+}
+
+.textarea-center {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #262626;
+  background: #141414;
+  resize: vertical;
+max-height: 500px;
+}
+
+.bottom-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.left-bottom {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  vertical-align: middle;
+}
+
+
+/* прибираємо стандартний чекбокс */
+.checkbox-input {
+  appearance: none;
+
+}
+
+/* стилізуємо label */
+.checkbox-lable {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #999;
+  font-size: 18px;
+}
+
+/* робимо квадратик з фоновим кольором */
+.checkbox-lable::before {
+  content: "";
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #262626;
+  background: #0F0F0F;
+  transition: background-color 0.3s;
+  align-self: flex-start;
+}
+
+/* Стан "вибраний" - checked при кліку звертаємось до псевдоелементу лейбла та задаємо потрібні стилі, чи фонову картинку - іконку */
+.checkbox-input:checked+.checkbox-lable::before {
+  background: url("../img/check.svg") center / 30px no-repeat;
+}
+
+/* власні стилі для outline при використанні навігації за допомогою Tab */
+.checkbox-input:focus-visible+.checkbox-lable {
+  outline: 2px solid #c80808;
+  border-radius: 5px;
+}
+
+
+.button-right {
+  color: #FFF;
+  font-weight: 600;
+  border-radius: 8px;
+  background: #E50000;
+  padding: 18px 24px;
+}
+
+.left-top__name {
+  margin-bottom: 50px;
+}
+
+.right-top__last-name {
+  margin-bottom: 50px;
+}
